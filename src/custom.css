@@ -1,0 +1,121 @@
+.hidden-sm {
+    display: none;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #151617;
+    width: 180px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    z-index: 99;
+    transition: all .3s linear;
+}
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.sidebar-open {
+    right: 0 !important;
+}
+
+/* Large devices (Tablets and Laptops) */
+@media screen and (min-width:600px) {
+    .hidden-ls {
+        display: none;
+    }
+
+    .w-700 {
+        width: 700px !important;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        background-color: transparent;
+        right: 0px;
+        width: fit-content;
+        height: fit-content;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    .overlay-close {
+        z-index: -1;
+        visibility: hidden;
+    }
+
+    .d-row-col {
+        display: flex;
+        flex-direction: row !important;
+    }
+}
+
+.overlay-close {
+    background-color: rgba(0, 0, 0, .1);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    z-index: -1;
+}
+
+.ovr-open {
+    z-index: 3;
+    visibility: visible;
+}
+
+.sidelogo {
+    position: relative;
+    line-height: 15px;
+    color: #fff;
+}
+
+.sidelogo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    z-index: -1;
+}
+.h-450 {
+    height: 450px;
+}
+.w-700 {
+    width: 100%;
+}
+
+.slick-current .slnav {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: 1px solid var(--blue);
+    font-size: large;
+    border-radius: 4px;
+  }
+  
+  .form-control:focus,
+  .form-control:hover {
+    outline: none;
+    box-shadow: 0px 0px 5px var(--blue)
+  }
+  
+  .form-group {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
